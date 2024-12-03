@@ -27,14 +27,11 @@ end
 -- Part 1 solution
 local function solve_part1()
 	local distance = 0
-	local temp_left = M.clone(left)
-	local temp_right = M.clone(right)
-	table.sort(temp_left)
-	table.sort(temp_right)
+	local temp_left = M.sort(left)
+	local temp_right = M.sort(right)
 	for i = 1, #temp_left do
 		distance = distance + math.abs(temp_left[i] - temp_right[i])
 	end
-
 	return distance
 end
 

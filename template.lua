@@ -1,6 +1,10 @@
+package.path = "./luajit/share/lua/5.1/?.lua;" .. package.path
+package.cpath = "./luajit/lib/lua/5.1/?.so;" .. package.cpath
+
 local inspect = require("inspect")
 local M = require("moses")
 
+M.
 function split(str, sep)
 	if sep == nil then
 		sep = "%s"
